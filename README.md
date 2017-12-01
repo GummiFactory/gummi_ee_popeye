@@ -20,7 +20,7 @@ You can now proceed to change gummi_ee_YOUR_OWN_EE/launch/controllers_base.launc
 
 ## Testing the end effector without a base 
 
-It is possible to run just the end effector without a base, but you need to load the mananger for your end effector. 
+It is possible to run just the end effector without a base, but you need to load a custom mananger for your end effector. 
 
 First fork this repository and make the suitable changes to describe your end-effector.
 
