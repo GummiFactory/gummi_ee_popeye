@@ -190,3 +190,9 @@ catkin_package(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+############### TO UPDATE SETUP.BASH FILE ###############
+
+execute_process(COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/scripts/update_setupbash.sh
+WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
