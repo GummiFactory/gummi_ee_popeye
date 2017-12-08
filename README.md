@@ -35,3 +35,7 @@ Roslaunch the eddited manager_only_ee.launch from your gummi_ee_template.
 Now roslaunch the controllers_ee.launch
 
 Run the rest of your code as usual.
+
+## Setting up new urdf definitions for end effector
+
+The xacro file in the xacro directory has all the urdf definitions (joints and links) for the end-effector from elbow to gripper, and should be updated to match the current end-effector
