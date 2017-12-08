@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!-- j5_Link -->
+  <robot>
+  <link
+    name="lowerarm_preroll">
+    <inertial>
+      <origin
+        xyz="0.0478250427975905 -0.000316437232932051 -0.0106413204754627"
+        rpy="0 0 0" />
+      <mass
+        value="0.0606243812523471" />
+      <inertia
+        ixx="2.06454707456843E-05"
+        ixy="-1.4331951640169E-06"
+        ixz="6.63107213803745E-06"
+        iyy="4.53417988250448E-05"
+        iyz="3.42736477119013E-07"
+        izz="4.5142289140086E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/j5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/j5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- j5 -->
+  <joint
+    name="elbow"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.1898"
+      rpy="0 0 0" />
+    <parent
+      link="upperarm" />
+    <child
+      link="lowerarm_preroll" />
+    <axis
+      xyz="0 -1 0" />
+    <!-- <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" /> -->
+    <limit effort="0" lower="-0.85" upper="0.65" velocity="1.0"/>
+  </joint>
+
+  <!-- j6_Link -->
+  <link
+    name="lowerarm">
+    <inertial>
+      <origin
+        xyz="0.063088 -4.524E-06 0.010537"
+        rpy="0 0 0" />
+      <mass
+        value="0.088554" />
+      <inertia
+        ixx="3.269E-05"
+        ixy="2.0124E-07"
+        ixz="-1.6433E-05"
+        iyy="7.2394E-05"
+        iyz="1.982E-07"
+        izz="6.9913E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/j6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/j6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- j6 -->
+  <joint
+    name="forearm_roll"
+    type="revolute">
+    <origin
+      xyz="0.0795 0.00025 -0.025"
+      rpy="0 0 0" />
+    <parent
+      link="lowerarm_preroll" />
+    <child
+      link="lowerarm" />
+    <axis
+      xyz="1 0 0" />
+    <!-- <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" /> -->
+    <limit effort="0" lower="-2.7489" upper="2.7489" velocity="1.0"/>
+  </joint>
+
+  <!-- j7_Link -->
+  <link
+    name="wrist">
+    <inertial>
+      <origin
+        xyz="0.09547 -0.0036816 -0.028022"
+        rpy="0 0 0" />
+      <mass
+        value="0.20597" />
+      <inertia
+        ixx="0.00034354"
+        ixy="1.9986E-06"
+        ixz="3.1921E-05"
+        iyy="0.00045939"
+        iyz="2.5997E-08"
+        izz="0.00046029" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/j7_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/j7_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- j7 -->
+  <joint
+    name="wrist_pitch"
+    type="revolute">
+    <origin
+      xyz="0.084137 0 0.009003"
+      rpy="0 0 0" />
+    <parent
+      link="lowerarm" />
+    <child
+      link="wrist" />
+    <axis
+      xyz="0 1 0" />
+      <!-- <limit
+        lower="-1.5708"
+        upper="1.5708"
+        effort="0"
+        velocity="0" /> -->
+      <limit effort="0" lower="-1.5" upper="1.68" velocity="1.0"/>
+  </joint>
+
+  <!-- gripper_Link -->
+  <link
+    name="gripper_Link">
+    <inertial>
+      <origin
+        xyz="-0.0233988267408998 -0.0183769778598925 -0.00217479089040148"
+        rpy="0 0 0" />
+      <mass
+        value="0.0573612129510164" />
+      <inertia
+        ixx="1.07017574054092E-05"
+        ixy="1.20541476778111E-07"
+        ixz="-2.08068523476524E-06"
+        iyy="6.40757036666839E-05"
+        iyz="3.89770387703761E-08"
+        izz="6.62562645856636E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_base_template/meshes/gripper_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- gripper -->
+  <joint
+    name="gripper"
+    type="revolute">
+    <origin
+      xyz="0.066697 -0.0261 0.0093282"
+      rpy="1.5708 1.0472 3.1416" />
+    <parent
+      link="wrist" />
+    <child
+      link="gripper_Link" />
+    <axis
+      xyz="0 1 0" />
+    <!-- <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" /> -->
+    <limit effort="0" lower="-0.30" upper="0.17" velocity="1.0"/>
+  </joint>
+</robot>
