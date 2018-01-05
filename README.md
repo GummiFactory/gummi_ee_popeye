@@ -10,7 +10,7 @@ Rename gummi_ee_handshake to gummi_ee_YOUR_OWN_EE
 
 `$ mv gummi_ee_handshake gummi_ee_YOUR_OWN_EE`
 
-Edit the file gummi_ee_YOUR_OWN_EE/set_env_gummi.sh
+Edit the file gummi_ee_YOUR_OWN_EE/scripts/set_env_gummi.sh
 
 `$ gedit gummi_ee_YOUR_OWN_EE/set_env_gummi.sh`
 
