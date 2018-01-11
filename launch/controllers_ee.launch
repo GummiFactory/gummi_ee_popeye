@@ -36,4 +36,11 @@
                 --port gummi_ae
                 wrist_encoder_controller"
           output="screen"/>
+
+    <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/dial_needle.yaml')" command="load"/>
+    <node name="dial_needle_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port gummi_d
+                dial_needle_controller"
+          output="screen"/>
 </launch>
