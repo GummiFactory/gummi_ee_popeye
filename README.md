@@ -12,11 +12,17 @@ Rename gummi_ee_handshake to gummi_ee_YOUR_OWN_EE
 
 Edit the file gummi_ee_YOUR_OWN_EE/scripts/set_env_gummi.sh
 
-`$ gedit gummi_ee_YOUR_OWN_EE/set_env_gummi.sh`
+`$ gedit gummi_ee_YOUR_OWN_EE/scripts/set_env_gummi.sh`
 
 And change the line containing "export ROS_GUMMI_EE=handshake" to "export ROS_GUMMI_EE=YOUR_OWN_EE"
 
-You can now proceed to change gummi_ee_YOUR_OWN_EE/launch/controllers_base.launch to contain the motor drivers that your end effector has and where they are connected in the bus and the updating the yaml definitions of joints in gummi_ee_YOUR_OWN_EE/dynamixel
+Change as well the name of the package in the CMakeLists.txt, manifest.xml and package.xml
+
+You can now proceed to change 
+
+1. gummi_ee_YOUR_OWN_EE/launch/controllers_base.launch to contain the motor drivers that your end effector has and where they are connected in the bus and the updating the yaml definitions of joints in gummi_ee_YOUR_OWN_EE/dynamixel and 
+
+2. the joint calibration and limits on gummi_ee_YOUR_OWN_EE/config, as well as updating the file gummi_ee_YOUR_OWN_EE/launch/load_config_ee.launch to reference the correct reference them. 
 
 ## Testing the end effector without a base 
 
