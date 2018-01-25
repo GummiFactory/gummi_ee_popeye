@@ -33,7 +33,7 @@
     <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/wrist_encoder.yaml')" command="load"/>
     <node name="wrist_encoder_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_ae
+                --port gummi_d
                 wrist_encoder_controller"
           output="screen"/>
 

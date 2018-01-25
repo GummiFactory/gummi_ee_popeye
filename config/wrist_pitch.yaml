@@ -9,7 +9,7 @@ equilibrium:
     servoOffset: 0
 signEncoder: -1
 signJoint: 1
-name: "wrist"
+name: "wrist_pitch"
 nameEncoder: "wrist_encoder"
 minAngle: -1.50
 maxAngle: 1.68
