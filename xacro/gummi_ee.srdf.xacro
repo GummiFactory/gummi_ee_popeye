@@ -5,6 +5,7 @@
     <joint name="elbow" />
     <joint name="forearm_roll" />
     <joint name="wrist_pitch" />
+    <joint name="coupling_tool"/>
 </xacro:macro>
 
 <xacro:macro name="group_right_gripper_ee">
@@ -22,17 +23,17 @@
 
 <xacro:macro name="end_effector_ee">
   <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-  <end_effector name="right_eef" parent_link="wrist" group="right_gripper" />
+<end_effector group="right_arm" name="right_eef" parent_link="tool"/>
 </xacro:macro>
 
 <xacro:macro name="disable_collisions_ee">
   <!-- <disable_collisions link1="right_hand" link2="wrist" reason="Never" />
   <disable_collisions link1="right_hand" link2="gripper_Link" reason="Never" /> -->
   <disable_collisions link1="gripper_Link" link2="lowerarm" reason="Never" />
-  <disable_collisions link1="gripper_Link" link2="lowerarm_preroll" reason="Never" />
+  <disable_collisions link1="gripper_Link" link2="lowerarm_preroll_d" reason="Never" />
   <disable_collisions link1="gripper_Link" link2="wrist" reason="Adjacent" />
-  <disable_collisions link1="lowerarm" link2="lowerarm_preroll" reason="Adjacent" />
+  <disable_collisions link1="lowerarm" link2="lowerarm_preroll_d" reason="Adjacent" />
   <disable_collisions link1="lowerarm" link2="wrist" reason="Adjacent" />
-  <disable_collisions link1="lowerarm_preroll" link2="wrist" reason="Never" />
+  <disable_collisions link1="lowerarm_preroll_d" link2="wrist" reason="Never" />
 </xacro:macro>
 </robot>
