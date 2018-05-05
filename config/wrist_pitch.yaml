@@ -7,6 +7,7 @@ equilibrium:
     nameExtensor: "wrist_extensor"
     servoRange: 5.4978
     servoOffset: 0.0
+    loadLimit: 0.5  # Testing limitLoad method in equilibrium_model.py.
 signEncoder: -1
 signJoint: 1
 name: "wrist_pitch"
