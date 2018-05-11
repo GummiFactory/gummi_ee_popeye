@@ -1,1 +1,16 @@
-
+joints:
+  forearm_roll:
+    effort: 1.0
+    gradual_startup_position: 0
+    gradual_startup_time: 1.0
+    antagonist: False
+  wrist_pitch:
+    effort: 1.0
+    gradual_startup_position: 0
+    gradual_startup_time: 1.0
+    antagonist: True
+  # gripper:
+  #   effort: 1.0
+  #   gradual_startup_position: 0
+  #   gradual_startup_time: 1.0
+  #   antagonist: False

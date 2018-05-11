@@ -2,36 +2,60 @@
 <robot name="gummi" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:macro name="group_right_arm_ee">
-    <joint name="elbow" />
     <joint name="forearm_roll" />
     <joint name="wrist_pitch" />
-    <joint name="coupling_tool"/>
 </xacro:macro>
 
 <xacro:macro name="group_right_gripper_ee">
   <group name="right_gripper">
-      <link name="wrist" />
-      <link name="gripper_Link" />
+    <link name="wrist"/>
+    <joint name="i1f"/>
+    <joint name="i2f"/>
+    <joint name="i3f"/>
+    <joint name="i4f"/>
+    <joint name="i5f"/>
   </group>
 </xacro:macro>
 
 <xacro:macro name="group_state_right_arm_ee">
-  <joint name="elbow" value="0" />
   <joint name="forearm_roll" value="0" />
   <joint name="wrist_pitch" value="0" />
 </xacro:macro>
 
 <xacro:macro name="end_effector_ee">
   <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-<end_effector group="right_arm" name="right_eef" parent_link="tool"/>
+<end_effector group="right_gripper" name="right_eef" parent_link="wrist" parent_group="right_arm"/>
 </xacro:macro>
 
 <xacro:macro name="disable_collisions_ee">
   <!-- <disable_collisions link1="right_hand" link2="wrist" reason="Never" />
-  <disable_collisions link1="right_hand" link2="gripper_Link" reason="Never" /> -->
-  <disable_collisions link1="gripper_Link" link2="lowerarm" reason="Never" />
-  <disable_collisions link1="gripper_Link" link2="lowerarm_preroll_d" reason="Never" />
-  <disable_collisions link1="gripper_Link" link2="wrist" reason="Adjacent" />
+  <disable_collisions link1="right_hand" link2="gripper_link" reason="Never" /> -->
+  <disable_collisions link1="i1" link2="lowerarm" reason="Never" />
+  <disable_collisions link1="i2" link2="lowerarm" reason="Never" />
+  <disable_collisions link1="i3" link2="lowerarm" reason="Never" />
+  <disable_collisions link1="i4" link2="lowerarm" reason="Never" />
+  <disable_collisions link1="i5" link2="lowerarm" reason="Never" />
+
+  <disable_collisions link1="i1" link2="wrist" reason="Never" />
+  <disable_collisions link1="i2" link2="wrist" reason="Never" />
+  <disable_collisions link1="i3" link2="wrist" reason="Never" />
+  <disable_collisions link1="i4" link2="wrist" reason="Never" />
+  <disable_collisions link1="i5" link2="wrist" reason="Never" />
+
+  <disable_collisions link1="i1" link2="i2" reason="Never" />
+  <disable_collisions link1="i1" link2="i3" reason="Never" />
+  <disable_collisions link1="i1" link2="i4" reason="Never" />
+  <disable_collisions link1="i1" link2="i5" reason="Never" />
+
+  <disable_collisions link1="i2" link2="i3" reason="Never" />
+  <disable_collisions link1="i2" link2="i4" reason="Never" />
+  <disable_collisions link1="i2" link2="i5" reason="Never" />
+
+  <disable_collisions link1="i3" link2="i4" reason="Never" />
+  <disable_collisions link1="i3" link2="i5" reason="Never" />
+
+  <disable_collisions link1="i4" link2="i5" reason="Never" />
+
   <disable_collisions link1="lowerarm" link2="lowerarm_preroll_d" reason="Adjacent" />
   <disable_collisions link1="lowerarm" link2="wrist" reason="Adjacent" />
   <disable_collisions link1="lowerarm_preroll_d" link2="wrist" reason="Never" />
