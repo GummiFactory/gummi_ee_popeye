@@ -45,12 +45,8 @@ The xacro file in the xacro directory has all the urdf definitions (joints and l
 
 ## What's new
 
- - updated to real mesh files instead of the red box approximation done by hand from the previous model after adding dovetail design (fastswitch joint in the urdf)
- - removed some elements that I thought might lead to collisions, so adjacent joints are kinda floating next to each other
- - added a transformation frame for the camera, in case one may want to work with tf2 to have the visual-servoing working with move-it
- - aligned the axis from the tool element to the camera, so that now moving it in the x axis means it will get closer to the handshake, z is up, y is a sideways movement, all in relationship to the camera image. The previous axis seemed to be in a rather strange orientation, parallel to a face of the gripper that doesn't even exist in this version anymore
-
-
+ - replaced boxes model for accurate one with dovetail design. 
+ 
 ##
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
