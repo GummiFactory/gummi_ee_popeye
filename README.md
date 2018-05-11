@@ -3,7 +3,7 @@
 ![](https://github.com/frederico-klein/gummi_ee_handshake/blob/master/images/handshake_dovetail.png "New handshake end effector with dovetail end.")
 
 
-Package for definitions of the handshake Picker End Effector.
+Package for definitions of the handshake End Effector.
 
 ## Setting up a new end effector
 
