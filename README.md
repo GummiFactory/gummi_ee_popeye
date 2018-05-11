@@ -1,13 +1,13 @@
 # gummi_ee_handshake
 
-![](https://github.com/frederico-klein/FieldworkRobotics/blob/master/images/handshake_dovetail.png "New handshake end effector with dovetail end.")
+![](https://github.com/frederico-klein/gummi_ee_handshake/blob/master/images/handshake_dovetail.png "New handshake end effector with dovetail end.")
 
 
-Package for definitions of the handshake Picker End Effector. 
+Package for definitions of the handshake Picker End Effector.
 
 ## Setting up a new end effector
 
-Fork or clone this repository. 
+Fork or clone this repository.
 
 Rename gummi_ee_handshake to gummi_ee_YOUR_OWN_EE
 
@@ -21,15 +21,15 @@ And change the line containing "export ROS_GUMMI_EE=handshake" to "export ROS_GU
 
 You can now proceed to change gummi_ee_YOUR_OWN_EE/launch/controllers_base.launch to contain the motor drivers that your end effector has and where they are connected in the bus and the updating the yaml definitions of joints in gummi_ee_YOUR_OWN_EE/dynamixel
 
-## Testing the end effector without a base 
+## Testing the end effector without a base
 
-It is possible to run just the end effector without a base, but you need to load a custom mananger for your end effector. 
+It is possible to run just the end effector without a base, but you need to load a custom mananger for your end effector.
 
 First fork this repository and make the suitable changes to describe your end-effector.
 
-Open the /launch/manager_only_ee.launch file and remove the interfaces that are not being used and change if necessary the id definitions for your current setup. 
+Open the /launch/manager_only_ee.launch file and remove the interfaces that are not being used and change if necessary the id definitions for your current setup.
 
-Run catkin_make after setting up your other packages. 
+Run catkin_make after setting up your other packages.
 
 Do a source from devel/setup.bash
 
@@ -51,7 +51,7 @@ The xacro file in the xacro directory has all the urdf definitions (joints and l
  - aligned the axis from the tool element to the camera, so that now moving it in the x axis means it will get closer to the handshake, z is up, y is a sideways movement, all in relationship to the camera image. The previous axis seemed to be in a rather strange orientation, parallel to a face of the gripper that doesn't even exist in this version anymore
 
 
-## 
+##
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
