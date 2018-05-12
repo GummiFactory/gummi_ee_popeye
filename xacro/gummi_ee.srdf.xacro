@@ -9,11 +9,7 @@
 <xacro:macro name="group_right_gripper_ee">
   <group name="right_gripper">
     <link name="wrist"/>
-    <joint name="i1f"/>
-    <joint name="i2f"/>
-    <joint name="i3f"/>
-    <joint name="i4f"/>
-    <joint name="i5f"/>
+    <joint name="gripper"/>
   </group>
 </xacro:macro>
 

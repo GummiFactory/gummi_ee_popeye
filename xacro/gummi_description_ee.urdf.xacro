@@ -167,6 +167,19 @@
       effort="0"
       velocity="0" />
   </joint>
+  <!--
+  making sure I can move my fingers in a synchronized way. also if they move at
+  different rates, set the mimic tag to something different. it allows for an
+  offset and a multiplication rate. check ros docs for details
+  -->
+  <joint name="gripper" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="wrist"/>
+    <child link="dummygripper"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="0" lower="0" upper="2" velocity="0"/>
+  </joint>
+  <link name="dummygripper"/>
   <link
     name="i1">
     <inertial>
@@ -224,6 +237,8 @@
       upper="0.8"
       effort="0"
       velocity="0" />
+    <mimic joint="gripper"/>
+
   </joint>
   <link
     name="i2">
@@ -282,6 +297,8 @@
       upper="0.8"
       effort="0"
       velocity="0" />
+    <mimic joint="gripper"/>
+
   </joint>
   <link
     name="i3">
@@ -340,6 +357,8 @@
       upper="0.8"
       effort="0"
       velocity="0" />
+    <mimic joint="gripper"/>
+
   </joint>
   <link
     name="i4">
@@ -398,6 +417,8 @@
       upper="0.8"
       effort="0"
       velocity="0" />
+    <mimic joint="gripper"/>
+
   </joint>
   <link
     name="i5">
@@ -456,5 +477,7 @@
       upper="0.8"
       effort="0"
       velocity="0" />
+    <mimic joint="gripper"/>
+
   </joint>
 </robot>
