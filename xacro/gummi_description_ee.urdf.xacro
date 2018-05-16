@@ -104,7 +104,7 @@
     <child
       link="lowerarm" />
     <axis
-      xyz="-1 0 0" />
+      xyz="1 0 0" />
     <limit
       effort="0"
       velocity="1" />
