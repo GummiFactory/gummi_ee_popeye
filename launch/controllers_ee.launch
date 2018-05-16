@@ -9,13 +9,6 @@
                 forearm_roll_controller"
           output="screen"/>
 
-   <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/hand_close.yaml')" command="load"/>
-    <node name="hand_close_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
-          args="--manager=dxl_manager
-                --port gummi_d
-                hand_close_controller"
-          output="screen"/>
-
     <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/wrist_flexor.yaml')" command="load"/>
     <node name="wrist_flexor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
@@ -37,10 +30,4 @@
                 wrist_encoder_controller"
           output="screen"/>
 
-    <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/dial_needle.yaml')" command="load"/>
-    <node name="dial_needle_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
-          args="--manager=dxl_manager
-                --port gummi_d
-                dial_needle_controller"
-          output="screen"/>
 </launch>
