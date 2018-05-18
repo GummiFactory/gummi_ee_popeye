@@ -1,8 +1,6 @@
 # gummi_ee_popeye
 
 
-![](https://raw.githubusercontent.com/wiki/frederico-klein/gummi_ee_handshake/images/handshake_dovetail.png "New handshake end effector with dovetail end.")
-
 ![](https://raw.githubusercontent.com/wiki/frederico-klein/gummi_ee_handshake/images/popeye.png  "New popeye end effector with dovetail end.")
 
 
