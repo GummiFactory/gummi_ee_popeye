@@ -1,6 +1,9 @@
 # gummi_ee_popeye
 
-![](https://github.com/frederico-klein/FieldworkRobotics/blob/master/images/popeye_dovetail.png "New popeye end effector with dovetail end.")
+
+![](https://raw.githubusercontent.com/wiki/frederico-klein/gummi_ee_handshake/images/handshake_dovetail.png "New handshake end effector with dovetail end.")
+
+![](https://raw.githubusercontent.com/wiki/frederico-klein/gummi_ee_handshake/images/popeye.png  "New popeye end effector with dovetail end.")
 
 
 Package for definitions of the popeye Picker End Effector. 
