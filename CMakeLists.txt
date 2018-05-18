@@ -100,7 +100,7 @@ find_package(catkin REQUIRED COMPONENTS xacro)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES gummi_ee_popeye
+#  LIBRARIES gummi_ee_handshake
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
@@ -115,7 +115,7 @@ catkin_package(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/gummi_ee_popeye.cpp
+#   src/${PROJECT_NAME}/gummi_ee_handshake.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -126,7 +126,7 @@ catkin_package(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/gummi_ee_popeye_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/gummi_ee_handshake_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -183,7 +183,7 @@ catkin_package(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_gummi_ee_popeye.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_gummi_ee_handshake.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

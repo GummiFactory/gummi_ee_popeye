@@ -1,5 +1,5 @@
 <package>
-  <description brief="gummi_ee_handshake">gummi_ee_handshake</description>
+  <description brief="gummi_ee_popeye">gummi_ee_popeye</description>
   <depend package="gazebo" />
   <author>Frederico Belmonte Klein</author>
   <license>BSD</license>

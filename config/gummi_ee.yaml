@@ -5,7 +5,7 @@ joints:
     gradual_startup_time: 1.0
     antagonist: False
   wrist_pitch:
-    effort: 0.0
+    effort: 0.001
     gradual_startup_position: 0
     gradual_startup_time: 1.0
     antagonist: True
