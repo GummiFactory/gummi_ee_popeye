@@ -91,7 +91,7 @@
   </link>
   <joint
     name="forearm_roll"
-    type="revolute">
+    type="fixed">
     <origin
       xyz="0.0073346 0.00058424 -0.028344"
       rpy="0 0 0" />

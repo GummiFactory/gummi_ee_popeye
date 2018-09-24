@@ -2,13 +2,6 @@
   <!-- This file is specific for handshake ee (end-effector). The eval expression is superfluous and
   it only makes sense to keep it, so that this can be adapted to other end-effectors faster. -->
   <arg name="ee" value="$(env ROS_GUMMI_EE)"/>
-    <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/forearm_roll.yaml')" command="load"/>
-    <node name="forearm_roll_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
-          args="--manager=dxl_manager
-                --port gummi_d
-                forearm_roll_controller"
-          output="screen"/>
-
     <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/wrist_flexor.yaml')" command="load"/>
     <node name="wrist_flexor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager

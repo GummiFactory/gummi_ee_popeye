@@ -4,6 +4,6 @@
   <arg name="ee" value="$(env ROS_GUMMI_EE)"/>
   <rosparam file="$(eval find('gummi_ee_' + ee) + '/config/wrist_pitch.yaml')" command="load" ns="wrist_pitch"/>
   <rosparam file="$(eval find('gummi_ee_' + ee) + '/config/calibration_wrist_pitch.yaml')" command="load" ns="wrist_pitch/calib"/>
-  <rosparam file="$(eval find('gummi_ee_' + ee) + '/config/forearm_roll.yaml')" command="load" ns="forearm_roll"/>
+  <!--rosparam file="$(eval find('gummi_ee_' + ee) + '/config/forearm_roll.yaml')" command="load" ns="forearm_roll"/-->
   <rosparam file="$(eval find('gummi_ee_' + ee) + '/config/i_gripper.yaml')" command="load" ns="i_gripper"/>
 </launch>
