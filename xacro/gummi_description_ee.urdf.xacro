@@ -865,7 +865,7 @@
   <joint name="coupling_tool" type="fixed">
     <origin
       xyz="0.1 0 0"
-      rpy="0 0 0" />
+      rpy="0 -1.04 0" />
     <parent
       link="gbase" />
     <child
