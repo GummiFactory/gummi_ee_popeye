@@ -8,6 +8,7 @@ equilibrium:
     servoRange: 5.4978
     servoOffset: 0.0
     loadLimit: 0.5  # Testing limitLoad method in equilibrium_model.py.
+    eqVelCalibration: 1.8
 signEncoder: -1
 signJoint: 1
 name: "wrist_pitch"
