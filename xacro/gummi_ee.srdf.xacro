@@ -2,6 +2,7 @@
 <robot name="gummi" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:macro name="group_right_arm_ee">
+    <joint name="forearm_roll" />
     <joint name="wrist_pitch" />
     <joint name="coupling_tool"/>
     <joint name="gdovetail"/>
@@ -16,6 +17,7 @@
 </xacro:macro>
 
 <xacro:macro name="group_state_right_arm_ee">
+  <joint name="forearm_roll" value="0" />
   <joint name="wrist_pitch" value="0" />
 </xacro:macro>
 

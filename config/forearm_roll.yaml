@@ -1,2 +1,3 @@
 minAngle: -1.53589
 maxAngle: 1.53589
+restingPoseAngle: 0.0 # Parameter to adjusting resting pose joint angle.

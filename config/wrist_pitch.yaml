@@ -12,7 +12,7 @@ signEncoder: -1
 signJoint: 1
 name: "wrist_pitch"
 nameEncoder: "wrist_encoder"
-minAngle: -1.0
+minAngle: -0.6
 maxAngle: 1.0
 maxAbsForwardError: 5.0
 gains:
